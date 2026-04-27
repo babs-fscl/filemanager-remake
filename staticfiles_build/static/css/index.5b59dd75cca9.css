@@ -1,0 +1,47 @@
+/* Basic styling reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Card styling */
+.card {
+    width: 300px;
+    padding: 20px;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.card-blue {
+    background-color: #007bff;
+}
+
+.card-green {
+    background-color: #28a745;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.05);
+}

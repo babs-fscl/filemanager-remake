@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .premium-bg {
+        background: linear-gradient(135deg, #f5f7fa 0%, #eef0f3 100%);
+        min-height: calc(100vh - 80px); /* Adjust for navbar */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    .glassmorphism-card {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        border-radius: 24px;
+        max-width: 600px;
+        width: 100%;
+        padding: 3rem 2.5rem;
+        text-align: center;
+    }
+
+    .premium-title {
+        font-weight: 700;
+        color: #1e293b;
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: -0.5px;
+    }
+
+    .premium-subtitle {
+        color: #64748b;
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #475569;
+        display: block;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+
+    .premium-input {
+        width: 100%;
+        padding: 1rem 1.25rem;
+        background: #fff;
+        border: 2px solid #e2e8f0;
+        border-radius: 12px;
+        font-size: 1rem;
+        color: #1e293b;
+        transition: all 0.3s ease;
+        margin-bottom: 1.5rem;
+    }
+
+    .premium-input:focus {
+        outline: none;
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        background: #fff;
+    }
+
+    .btn-premium {
+        width: 100%;
+        padding: 1rem;
+        background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+        border: none;
+        border-radius: 12px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .btn-premium:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 15px 25px rgba(37, 99, 235, 0.3);
+    }
+
+    .btn-premium:active {
+        transform: translateY(0);
+    }
+
+    .icon-box {
+        width: 64px;
+        height: 64px;
+        background: rgba(59, 130, 246, 0.1);
+        color: #3b82f6;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin: 0 auto 1.5rem;
+    }
+
+    /* Loader */
+    .loader-overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(255,255,255,0.8);
+        z-index: 1060;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(4px);
+    }
+</style>
+
+<div class="loader-overlay" id="fullPageLoader">
+    <div class="text-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
+        <div class="mt-3 fw-bold text-primary">Generating Sitemap...</div>
+        <div class="text-muted small mt-1">This may take a minute for large websites.</div>
+    </div>
+</div>
+
+<div class="premium-bg">
+    <div class="glassmorphism-card">
+        <div class="icon-box">
+            <i class="bi bi-diagram-3"></i>
+        </div>
+        <h2 class="premium-title">Generate Sitemap</h2>
+        <p class="premium-subtitle">Enter your website URL to crawl and generate an XML sitemap.</p>
+
+        {% include 'messages.html' %}
+
+        <form method="POST" action="{% url 'gen_sitemap' %}" id="sitemap-form" onsubmit="startLoading()">
+            {% csrf_token %}
+            
+            <div class="text-start">
+                <label for="urlInput" class="form-label">Website URL</label>
+                <input type="url" class="form-control premium-input" id="urlInput" name="url_input" 
+                       placeholder="https://example.com" required>
+            </div>
+
+            <button type="submit" class="btn-premium">
+                <i class="bi bi-gear-fill"></i>
+                Generate Now
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    function startLoading() {
+        document.getElementById('fullPageLoader').style.display = 'flex';
+    }
+</script>
+
+{% endblock %}

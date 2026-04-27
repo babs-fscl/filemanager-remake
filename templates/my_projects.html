@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+     <div class="card mb-5">
+            <div class="card-body">
+
+                {% include 'messages.html' %}
+                <form id="project-form"
+                      method="POST"
+                      action="{% url 'new_project' %}">
+                    {% csrf_token %}
+                    <div class="radio-container">
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="sitemap" name="data_type" value="sitemap">
+                            <label class="form-check-label" for="sitemap">Sitemap</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="url" name="data_type" value="url">
+                            <label class="form-check-label" for="url">URL</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="youtube" name="data_type" value="youtube">
+                            <label class="form-check-label" for="youtube">YouTube</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3" id="url-container" style="display: none;">
+                        <label for="urlInput" class="form-label" id="urlLabel">URL</label>
+                        <input type="text" class="form-control" id="urlInput" name="url_input"
+                               placeholder="Enter URL here">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="projectName" class="form-label">Project Name</label>
+                        <input type="text" class="form-control" id="projectName" name="name" required>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">Create Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+{% if projects %}
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-lg-4 col-md-6 col-sm-12 pb-4">
+                <div class="card text-white
+                    {% if project.is_sitemap %} bg-danger
+                    {% elif project.is_website %} bg-primary
+                    {% elif project.is_youtube %} bg-success
+                    {% elif project.is_url %} bg-warning
+                    {% else %} bg-secondary
+                    {% endif %} mb-3">
+                    <div class="card-header">{{ project.uploaded_at }}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.name }}</h5>
+                        <div class="card-text d-flex gap-2">
+                            <a href="{% url 'proj_chatbot' project.uuid %}" target="_blank" class="btn btn-light flex-grow-1">Chat</a>
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end shadow border-0">
+                                    <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#shareProjectModal{{ project.id }}"><i class="bi bi-share me-2"></i>Share</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Share Project Modal -->
+            <div class="modal fade text-dark" id="shareProjectModal{{ project.id }}" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg rounded-4">
+                        <div class="modal-header border-0 pb-0">
+                            <h5 class="modal-title fw-bold">Share Project</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body p-4">
+                            <div class="d-flex align-items-center gap-3 mb-4 p-3 bg-light rounded-3">
+                                <i class="bi bi-folder2-open h3 mb-0 text-primary"></i>
+                                <div class="text-truncate">
+                                    <h6 class="mb-0 fw-semibold">{{ project.name }}</h6>
+                                    <small class="text-muted text-uppercase">Project</small>
+                                </div>
+                            </div>
+                            <form onsubmit="shareProject(event, {{ project.id }})">
+                                {% csrf_token %}
+                                <div class="mb-4">
+                                    <label class="form-label small fw-bold text-uppercase">Share with Organization Member</label>
+                                    <select class="form-select form-select-lg bg-light border-0" id="recipientEmailProj{{ project.id }}" required>
+                                        <option value="" selected disabled>Select a member...</option>
+                                        {% for member in org_members %}
+                                            {% if member != user %}
+                                                <option value="{{ member.email }}">{{ member.get_full_name }} ({{ member.email }})</option>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3 rounded-3 fw-bold" id="shareBtnProj{{ project.id }}">
+                                    <span class="spinner-border spinner-border-sm d-none me-2" id="shareSpinnerProj{{ project.id }}"></span>
+                                    Send Invite
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <div class="error-container">
+        <div class="error-message">You have no Files available</div>
+        <p>The page you are looking for might have been removed or is temporarily unavailable.</p>
+        <a href="{% url 'upload' %}" class="home-link">Back to Home Page</a>
+    </div>
+{% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const radios = document.querySelectorAll('input[name="data_type"]');
+    const urlContainer = document.getElementById('url-container');
+    const urlInput = document.getElementById('urlInput');
+    const urlLabel = document.getElementById('urlLabel');
+
+    function updateForm() {
+        const selected = document.querySelector('input[name="data_type"]:checked');
+        if (selected) {
+            urlContainer.style.display = 'block';
+            urlInput.required = true;
+            if (selected.value === 'sitemap') {
+                urlLabel.innerText = 'Sitemap URL';
+                urlInput.placeholder = 'E.g. https://example.com/sitemap.xml';
+            } else if (selected.value === 'url') {
+                urlLabel.innerText = 'Website URLs (separate multiple with ;)';
+                urlInput.placeholder = 'E.g. https://example.com;https://example.com/about';
+            } else if (selected.value === 'youtube') {
+                urlLabel.innerText = 'YouTube Video URL';
+                urlInput.placeholder = 'E.g. https://www.youtube.com/watch?v=...';
+            }
+        } else {
+            urlContainer.style.display = 'none';
+            urlInput.required = false;
+        }
+    }
+
+    radios.forEach(radio => {
+        radio.addEventListener('change', updateForm);
+    });
+
+    // Initial check in case of browser autofill/back navigation
+    updateForm();
+});
+
+function shareProject(event, projectId) {
+    event.preventDefault();
+    const email = document.getElementById(`recipientEmailProj${projectId}`).value;
+    const btn = document.getElementById(`shareBtnProj${projectId}`);
+    const spinner = document.getElementById(`shareSpinnerProj${projectId}`);
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    btn.disabled = true;
+    spinner.classList.remove('d-none');
+
+    const shareUrl = "{% url 'share_project' 0 %}".replace('/0/', `/${projectId}/`);
+
+    fetch(shareUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        body: JSON.stringify({ email: email })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            alert('Project shared successfully!');
+            bootstrap.Modal.getInstance(document.getElementById(`shareProjectModal${projectId}`)).hide();
+        } else {
+            alert('Error: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('An unexpected error occurred.');
+    })
+    .finally(() => {
+        btn.disabled = false;
+        spinner.classList.add('d-none');
+    });
+}
+</script>
+{% endblock %}

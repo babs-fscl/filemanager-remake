@@ -1,0 +1,46 @@
+services:
+  fileapp:
+    build: .
+    container_name: fileapp_container
+    command: gunicorn fileapp.wsgi:application --bind 0.0.0.0:8000
+    environment:
+      - DJANGO_SETTINGS_MODULE=fileapp.settings
+      - DATABASE_URL=postgres://welzatm:Mayflower48@fileapp_db:5432/db_fileapp
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      fileapp_db:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    restart: always
+
+  fileapp_db:
+    image: postgres:13
+    container_name: fileapp_db_container
+    environment:
+      POSTGRES_USER: welzatm
+      POSTGRES_PASSWORD: Mayflower48
+      POSTGRES_DB: db_fileapp
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U welzatm"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: fileapp_redis_container
+    ports:
+      - "6379:6379"
+    restart: always
+
+volumes:
+  postgres_data:

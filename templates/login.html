@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load pwa %}
+
+
+
+<head>
+    {% progressive_web_app_meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="https://fusionscl.com/wp-content/uploads/2020/04/cropped-Crop-FCSL-51-2.png">
+   <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			width: 300px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    {% include 'messages.html' %}
+    <img src="https://fusionscl.com/wp-content/uploads/2020/04/cropped-Crop-FCSL-51-2.png" alt="Logo" class="logo">
+    <h2>Login</h2>
+    <form action="{% url 'login' %}{% if request.GET.next %}?next={{ request.GET.next }}{% endif %}" method="post">
+        {% csrf_token %}
+        <div class="input-group">
+            <input type="email" placeholder="Email" name='email' required>
+        </div>
+        <div class="input-group">
+            <input type="password" placeholder="Password" name='password' required>
+        </div>
+        <a class="btn" href="{% url 'register' %}">Sign Up</a>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+</div>
+
+</body>
+
+</html>

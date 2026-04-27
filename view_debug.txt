@@ -1,0 +1,1200 @@
+DEBUG: upload_file reached. Method: GET, User: first_bank@fb.com, Path: /home/
+DEBUG: upload_file reached. Method: GET, User: first_bank@fb.com, Path: /home/
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000020561ABF850>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020561ABF850>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000020561ABF850>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: tope@gtco.com, Role: member, Org: Welz Technologies In
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\sentry_sdk\integrations\stdlib.py", line 128, in getresponse
+    rv = real_getresponse(self, *args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\sentry_sdk\integrations\stdlib.py", line 128, in getresponse
+    rv = real_getresponse(self, *args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x0000019B07368E10>: Failed to resolve 'translate.google.com' ([Errno 11001] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019B07368E10>: Failed to resolve 'translate.google.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000019B07368E10>: Failed to resolve 'translate.google.com' ([Errno 11001] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 652, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 805, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 652, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 805, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 652, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 805, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 465, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\ssl_.py", line 509, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 517, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1108, in _create
+    self.do_handshake()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\ssl.py", line 1379, in do_handshake
+    self._sslobj.do_handshake()
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 468, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=conn.timeout)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 369, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='translate.google.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 713, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='translate.google.com', port=443): Read timed out. (read timeout=None)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\sentry_sdk\integrations\stdlib.py", line 128, in getresponse
+    rv = real_getresponse(self, *args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 474, in increment
+    raise reraise(type(error), error, _stacktrace)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\util.py", line 38, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 464, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\sentry_sdk\integrations\stdlib.py", line 128, in getresponse
+    rv = real_getresponse(self, *args, **kwargs)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 1378, in getresponse
+    response.begin()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\http\client.py", line 287, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 682, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 493, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x00000251E8070C10>, 'Connection to translate.google.com timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000251E8070C10>, 'Connection to translate.google.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000251E8070C10>, 'Connection to translate.google.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 497, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 205, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x00000251E76F1C10>, 'Connection to translate.google.com timed out. (connect timeout=None)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000251E76F1C10>, 'Connection to translate.google.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x00000251E76F1C10>, 'Connection to translate.google.com timed out. (connect timeout=None)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 497, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000251E0913D90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000251E0913D90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000251E0913D90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 497, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000251DC2B4650>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000251DC2B4650>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000251DC2B4650>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 497, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+DEBUG: new_project exception: No content could be extracted from the sitemap.
+
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+DEBUG: stream_chat_audio exception: Failed to connect. Probable cause: Unknown
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 196, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 11002] getaddrinfo failed
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 789, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 490, in _make_request
+    raise new_e
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 466, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 1095, in _validate_conn
+    conn.connect()
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 615, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connection.py", line 203, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x00000239865EDB90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000239865EDB90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 268, in stream
+    r = s.send(
+        ^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.google.com', port=443): Max retries exceeded with url: /_/TranslateWebserverUi/data/batchexecute (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x00000239865EDB90>: Failed to resolve 'translate.google.com' ([Errno 11002] getaddrinfo failed)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tpsol\Downloads\fscl-file-portal\file\views.py", line 497, in stream_chat_audio
+    tts.save(audio_file_path)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 335, in save
+    self.write_to_fp(f)
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 316, in write_to_fp
+    for idx, decoded in enumerate(self.stream()):
+  File "C:\Users\tpsol\anaconda3\envs\filemanager\Lib\site-packages\gtts\tts.py", line 287, in stream
+    raise gTTSError(tts=self)
+gtts.tts.gTTSError: Failed to connect. Probable cause: Unknown
+
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /create-project/ ---
+--- Request: /create-project/ ---
+--- Request: /home/ ---
+User: first_bank@fb.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: test@example.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: newuser@example.com, Role: admin, Org: Welz
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: test@example.com, Role: member, Org: None
+DEBUG: upload_file reached line 71 (pre-RBAC)
+DEBUG: upload_file: org_members query done
+DEBUG: upload_file: files query done
+--- Request: /home/ ---
+User: test@example.com, Role: member, Org: None

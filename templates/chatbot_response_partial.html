@@ -1,0 +1,20 @@
+{% for message in chat_history %}
+<div class="message {% if message.is_bot_response %}bot-message{% else %}user-message{% endif %}">
+    <div class="message-content unparsed-markdown">{{ message.message }}</div>
+    <span class="timestamp">{{ message.timestamp|date:"H:i" }}</span>
+
+    {% if message.is_bot_response %}
+    <div class="audio-controls">
+        <audio>
+            <source src="{% url 'stream_chat_audio' message.pk %}" type="audio/mpeg">
+        </audio>
+        <button class="btn btn-sm btn-light rounded-circle play-audio-btn" title="Play Audio">
+            <i class="bi bi-play-fill"></i>
+        </button>
+        <a href="{% url 'stream_chat_audio' message.pk %}" download class="download-btn" title="Download Audio">
+            <i class="bi bi-download"></i>
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endfor %}

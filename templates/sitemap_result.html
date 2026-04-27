@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    .premium-bg {
+        background: linear-gradient(135deg, #f5f7fa 0%, #eef0f3 100%);
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+    }
+
+    .result-card {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+        border-radius: 24px;
+        max-width: 500px;
+        width: 100%;
+        padding: 3rem 2rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .status-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin: 0 auto 1.5rem;
+    }
+
+    .status-success {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10b981;
+    }
+
+    .status-error {
+        background: rgba(239, 68, 68, 0.1);
+        color: #ef4444;
+    }
+
+    .result-title {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #1e293b;
+        margin-bottom: 0.75rem;
+    }
+
+    .result-message {
+        color: #64748b;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+    }
+
+    .btn-action {
+        padding: 0.75rem 1.5rem;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.2s;
+    }
+
+    .btn-home {
+        background: #3b82f6;
+        color: #fff;
+    }
+
+    .btn-home:hover {
+        background: #2563eb;
+        color: #fff;
+        transform: translateY(-2px);
+    }
+
+    .btn-retry {
+        background: #f1f5f9;
+        color: #475569;
+        border: 1px solid #e2e8f0;
+    }
+
+    .btn-retry:hover {
+        background: #e2e8f0;
+        transform: translateY(-2px);
+    }
+</style>
+
+<div class="premium-bg">
+    <div class="result-card">
+        {% if success %}
+            <div class="status-icon status-success">
+                <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <h2 class="result-title">Generation Successful!</h2>
+            <p class="result-message">
+                Your sitemap has been successfully generated and saved to your system desktop as <strong>sitemap.txt</strong>.
+            </p>
+            <div class="d-flex flex-column gap-2">
+                <a href="{% url 'upload' %}" class="btn-action btn-home">
+                    <i class="bi bi-house-door"></i> Back to Home
+                </a>
+            </div>
+        {% else %}
+            <div class="status-icon status-error">
+                <i class="bi bi-exclamation-triangle-fill"></i>
+            </div>
+            <h2 class="result-title">Generation Failed</h2>
+            <p class="result-message">
+                {{ error_message|default:"An unexpected error occurred while crawling the website. Please check the URL and try again." }}
+            </p>
+            <div class="d-flex flex-column gap-2">
+                <a href="{% url 'gen_sitemap' %}" class="btn-action btn-home">
+                    <i class="bi bi-arrow-left"></i> Try Again
+                </a>
+                <a href="{% url 'upload' %}" class="btn-action btn-retry">
+                    <i class="bi bi-house-door"></i> Go to Dashboard
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+Hi,
+
+{{ sender_name }} from {{ company_name }} has shared a file with you on the FSCL File Portal.
+
+File Name: {{ doc_name }}
+Download Link: {{ file_url }}
+
+Best regards,
+FSCL Team

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card shadow-sm border-0" style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 15px;">
+                <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-4">
+                    <h3 class="text-white mb-0">Manage Organization: {{ user.organization.name }}</h3>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                        <i class="bi bi-person-plus me-2"></i>Add Member
+                    </button>
+                </div>
+                <div class="card-body p-4">
+                    <div class="table-responsive">
+                        <table class="table table-hover text-white">
+                            <thead>
+                                <tr style="border-bottom: 2px solid rgba(255, 255, 255, 0.1);">
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Joined</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for member in members %}
+                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+                                    <td>{{ member.get_full_name }}</td>
+                                    <td>{{ member.email }}</td>
+                                    <td>
+                                        <span class="badge {% if member.role == 'admin' %}bg-primary{% else %}bg-secondary{% endif %}">
+                                            {{ member.get_role_display }}
+                                        </span>
+                                    </td>
+                                    <td>{{ member.date_created|date:"M d, Y" }}</td>
+                                </tr>
+                                {% empty %}
+                                <tr>
+                                    <td colspan="4" class="text-center py-4">No members found.</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add User Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: rgba(30, 41, 59, 0.95); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; color: white;">
+            <div class="modal-header border-0 p-4 pb-0">
+                <h5 class="modal-title fw-bold" id="addUserModalLabel">Add New Member</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label small text-white-50">First Name</label>
+                        <input type="text" name="first_name" class="form-control bg-dark border-secondary text-white" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-white-50">Last Name</label>
+                        <input type="text" name="last_name" class="form-control bg-dark border-secondary text-white" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-white-50">Email Address</label>
+                        <input type="email" name="email" class="form-control bg-dark border-secondary text-white" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small text-white-50">Password</label>
+                        <input type="password" name="password" class="form-control bg-dark border-secondary text-white" required>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 p-4 pt-0">
+                    <button type="button" class="btn btn-link text-white-50 text-decoration-none" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary px-4 py-2" style="border-radius: 10px;">Create Account</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+    .text-white {
+        color: #fff !important;
+    }
+    .modal-content .form-control {
+        background: rgba(0, 0, 0, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        color: white !important;
+    }
+    .modal-content .form-control:focus {
+        background: rgba(0, 0, 0, 0.3) !important;
+        border-color: #0d6efd !important;
+        box-shadow: none !important;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,6 @@
+Hi {{ sender_name }},
+
+The file "{{ doc_name }}" has been downloaded from the FSCL File Portal.
+
+Best regards,
+FSCL Team

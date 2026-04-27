@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="main-content">
+        {% include 'messages.html' %}
+        <div class="pt-3 pb-2 mb-3 border-bottom">
+            <img src="https://fusionscl.com/wp-content/uploads/2020/04/cropped-Crop-FCSL-51-2.png" alt="Logo"
+                 class="logo">
+        </div>
+        <div class="card">
+            <div class="card-body">
+
+                {% include 'messages.html' %}
+                <!-- Form that will change based on radio button selection -->
+                <form id="project-form"
+                      method="POST"
+                      hx-post="{% url 'gen_sitemap' %}"
+                      hx-target="#form-response"
+                      hx-swap="innerHTML"
+                      hx-on::after-request='this.reset()'
+                      onsubmit="showLoaderOnClick(event)">
+                    {% csrf_token %}
+
+                    <!-- Other form fields that will change dynamically -->
+                    <div id="dynamic-fields">
+                        <div class="mb-3" id="url-container">
+                            <label for="urlInput" class="form-label">URL</label>
+                            <input type="text" class="form-control" id="urlInput" name="url_input"
+                                   placeholder="Enter URL">
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Project Name</label>
+                            <input type="text" class="form-control" id="projectName" name="name" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between">
+                        <button type="submit" class="btn btn-primary">Generate SiteMap</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-2">
+        <div class="row" id="form-response">
+            <!-- Spinner will be shown during HTMX requests -->
+            <div class="spinner-container" id="spinner-container">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
