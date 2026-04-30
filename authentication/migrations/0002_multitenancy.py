@@ -1,0 +1,30 @@
+from django.db import migrations, models
+import django.db.models.deletion
+
+class Migration(migrations.Migration):
+
+    dependencies = [
+        ('authentication', '0001_initial'),
+    ]
+
+    operations = [
+        migrations.CreateModel(
+            name='Organization',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255)),
+                ('slug', models.SlugField(blank=True, max_length=255, null=True, unique=True)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+            ],
+        ),
+        migrations.AddField(
+            model_name='customuser',
+            name='organization',
+            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='members', to='authentication.organization'),
+        ),
+        migrations.AddField(
+            model_name='customuser',
+            name='role',
+            field=models.CharField(choices=[('admin', 'Organization Admin'), ('member', 'Organization Member')], default='member', max_length=20),
+        ),
+    ]
