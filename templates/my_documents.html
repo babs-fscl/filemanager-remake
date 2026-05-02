@@ -175,9 +175,15 @@
                 </div>
 
                 <div class="file-actions">
+                    {% if file.content %}
                     <a href="{% url 'chatbot' file.uuid %}" class="btn btn-primary btn-action" title="Chat with AI">
                         <i class="bi bi-chat-text-fill"></i> Chat
                     </a>
+                    {% else %}
+                    <button class="btn btn-warning btn-action text-dark fw-bold" disabled title="Document is being processed">
+                        <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span> Processing...
+                    </button>
+                    {% endif %}
                     <div class="dropdown flex-grow-1">
                         <button class="btn btn-outline-secondary btn-action w-100" type="button" data-bs-toggle="dropdown">
                             <i class="bi bi-three-dots"></i> More
