@@ -224,8 +224,8 @@ PWA_APP_SPLASH_SCREEN = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 
-CELERY_BROKER_URL = os.getenv('REDIS_URL', 'redis://redis:6379/0').strip()
-CELERY_RESULT_BACKEND = os.getenv('REDIS_URL', 'redis://redis:6379/0').strip()
+CELERY_BROKER_URL = os.getenv('REDIS_URL', 'redis://127.0.0.1:6379/0').strip()
+CELERY_RESULT_BACKEND = os.getenv('REDIS_URL', 'redis://127.0.0.1:6379/0').strip()
 
 # CELERY_BROKER_URL = 'redis://default:ZrCgGHlkv8CK5zV1WmGREQNgdMjQH9MB@redis-14782.c56.east-us.azure.redns.redis
 # -cloud' '.com:14782' CELERY_RESULT_BACKEND =
