@@ -5,6 +5,9 @@ from celery import shared_task
 import requests
 import json
 from django.conf import settings
+import tempfile
+import os
+from .utils import load_docx_file, load_pdf_file, load_csv_file, load_xlsx_file
 
 
 # celery -A fileapp worker --pool=solo -l info
@@ -52,3 +55,37 @@ def send_simple_share_message(sender_id, receiver_email, context_json):
     except Exception as e:
         print(f"Error in send_simple_share_message: {e}")
         return None
+
+
+@shared_task
+def process_uploaded_file_task(doc_id):
+    try:
+        doc = Document.objects.get(pk=doc_id)
+        if not doc.file:
+            return
+            
+        file_type = doc.type
+        content_loader = {
+            'docx': load_docx_file,
+            'pdf': load_pdf_file,
+            'csv': load_csv_file,
+            'xlsx': load_xlsx_file
+        }
+        
+        if file_type not in content_loader:
+            return
+
+        with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file_type}") as temp_file:
+            for chunk in doc.file.chunks():
+                temp_file.write(chunk)
+            temp_file_path = temp_file.name
+
+        try:
+            content = content_loader[file_type](temp_file_path)
+            doc.content = content
+            doc.save()
+        finally:
+            if os.path.exists(temp_file_path):
+                os.remove(temp_file_path)
+    except Exception as e:
+        print(f"Error in process_uploaded_file_task: {e}")

@@ -65,35 +65,12 @@ def upload_file(request):
                     type=file_type
                 )
 
-                # Process file content based on type
-                content_loader = {
-                    'docx': load_docx_file,
-                    'pdf': load_pdf_file,
-                    'csv': load_csv_file,
-                    'xlsx': load_xlsx_file
-                }
-
                 try:
-                    # Create a temporary file to store the content for processing
-                    # This is needed because remote storages (like Azure) do not support absolute local paths
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file_type}") as temp_file:
-                        for chunk in file.chunks():
-                            temp_file.write(chunk)
-                        temp_file_path = temp_file.name
-
-                    try:
-                        content = content_loader[file_type](temp_file_path)
-                        doc.content = content
-                        doc.save()
-                        messages.success(request, 'File uploaded and processed successfully.')
-                    finally:
-                        # Ensure the temporary file is deleted from local disk
-                        if os.path.exists(temp_file_path):
-                            os.remove(temp_file_path)
+                    from .tasks import process_uploaded_file_task
+                    process_uploaded_file_task.delay(doc.pk)
+                    messages.success(request, 'File uploaded successfully and is being processed in the background.')
                 except Exception as e:
-                    doc.delete()  # Clean up on failure
-                    messages.error(request, f'Error processing file: {str(e)}')
-                    return redirect('upload')
+                    messages.warning(request, f'File uploaded, but background processing failed to start: {str(e)}')
             else:
                 messages.error(request, 'No file was uploaded.')
                 return redirect('upload')
