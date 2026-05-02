@@ -179,7 +179,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DEFAULT_FILE_STORAGE = 'fileapp.custom_storage.AzureMediaStorage'
 AZURE_ACCOUNT_NAME = os.getenv("AZURE_ACCOUNT_NAME", "fsclfilemanager")
-AZURE_ACCOUNT_KEY = os.getenv("AZURE_ACCOUNT_KEY", "dummy_azure_account_key")
+AZURE_ACCOUNT_KEY = os.getenv("AZURE_ACCOUNT_KEY", "9udZjS5p57ShBC5sypov07cdmDxaCtgPr1eeIoEAkhbcaPPRKg4w2YOAr/BpP5FNjQYLPcJrZ8ig+AStS5hPJg==")
 AZURE_CONTAINER="media"
 AZURE_STATIC_CONTAINER= "static"
 AZURE_MEDIA_CONTAINER = "media"
