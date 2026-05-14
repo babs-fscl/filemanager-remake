@@ -60,8 +60,10 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'cloudinary',
     'authentication',
     'file',
     'rest_framework',
@@ -124,6 +126,13 @@ else:
         }
     }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 MISTRAL_UTIL_API_KEY = os.getenv('MISTRAL_UTIL_API_KEY')
 
 # Password validation
@@ -166,8 +175,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_STORAGE = "fileapp.custom_storage.AzureStaticStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -177,12 +185,13 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-DEFAULT_FILE_STORAGE = 'fileapp.custom_storage.AzureMediaStorage'
-AZURE_ACCOUNT_NAME = os.getenv("AZURE_ACCOUNT_NAME", "fsclfilemanager")
-AZURE_ACCOUNT_KEY = os.getenv("AZURE_ACCOUNT_KEY", "9udZjS5p57ShBC5sypov07cdmDxaCtgPr1eeIoEAkhbcaPPRKg4w2YOAr/BpP5FNjQYLPcJrZ8ig+AStS5hPJg==")
-AZURE_CONTAINER="media"
-AZURE_STATIC_CONTAINER= "static"
-AZURE_MEDIA_CONTAINER = "media"
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.getenv('EMAIL_HOST')
@@ -224,8 +233,8 @@ PWA_APP_SPLASH_SCREEN = [
 PWA_APP_DIR = 'ltr'
 PWA_APP_LANG = 'en-US'
 
-CELERY_BROKER_URL = os.getenv('REDIS_URL', 'redis://127.0.0.1:6379/0').strip()
-CELERY_RESULT_BACKEND = os.getenv('REDIS_URL', 'redis://127.0.0.1:6379/0').strip()
+CELERY_BROKER_URL = os.getenv('REDIS_URL', 'redis://redis:6379/0').strip()
+CELERY_RESULT_BACKEND = os.getenv('REDIS_URL', 'redis://redis:6379/0').strip()
 
 # CELERY_BROKER_URL = 'redis://default:ZrCgGHlkv8CK5zV1WmGREQNgdMjQH9MB@redis-14782.c56.east-us.azure.redns.redis
 # -cloud' '.com:14782' CELERY_RESULT_BACKEND =
