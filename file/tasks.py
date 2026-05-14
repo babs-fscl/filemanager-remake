@@ -76,8 +76,9 @@ def process_uploaded_file_task(doc_id):
             return
 
         with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file_type}") as temp_file:
-            for chunk in doc.file.chunks():
-                temp_file.write(chunk)
+            doc.file.open('rb')
+            temp_file.write(doc.file.read())
+            doc.file.close()
             temp_file_path = temp_file.name
 
         try:
